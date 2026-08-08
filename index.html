@@ -141,13 +141,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
     background: linear-gradient(160deg, var(--garnet), var(--garnet-deep));
     position: relative;
+    overflow: hidden;
   }
 
   .ticket-gate.blue {
     background: linear-gradient(160deg, var(--blue), var(--blue-deep));
+  }
+
+  .ticket-gate img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   .perforation {
@@ -176,14 +183,14 @@
     justify-content: center;
     gap: 4px;
   }
-
-  .ticket-index {
+ .ticket-index {
     font-family: 'Oswald', sans-serif;
     font-size: 11px;
     letter-spacing: 2px;
     color: var(--muted);
   }
- .ticket-name {
+
+  .ticket-name {
     font-weight: 700;
     font-size: 16.5px;
   }
@@ -237,7 +244,7 @@
 <div class="container">
 
   <a class="ticket" href="https://t.me/+FovoXWz0fLRhOTBk" onclick="return openChannel(event,'https://t.me/+FovoXWz0fLRhOTBk')">
-    <div class="ticket-gate">🇪🇸</div>
+    <div class="ticket-gate"><img src="gate1.png" alt=""></div>
     <div class="perforation"></div>
     <div class="ticket-body">
       <span class="ticket-index">GATE 01</span>
@@ -247,7 +254,7 @@
   </a>
 
   <a class="ticket" href="https://t.me/+kSDCZZdUq8JmYmE0" onclick="return openChannel(event,'https://t.me/+kSDCZZdUq8JmYmE0')">
-    <div class="ticket-gate blue">❤️</div>
+    <div class="ticket-gate blue"><img src="gate2.jpg" alt=""></div>
     <div class="perforation"></div>
     <div class="ticket-body">
       <span class="ticket-index">GATE 02</span>
@@ -257,7 +264,7 @@
   </a>
 
   <a class="ticket" href="https://t.me/+i-dR3foyYqY5ZWEx" onclick="return openChannel(event,'https://t.me/+i-dR3foyYqY5ZWEx')">
-    <div class="ticket-gate">🐐</div>
+    <div class="ticket-gate"><img src="gate3.jpg" alt=""></div>
     <div class="perforation"></div>
     <div class="ticket-body">
       <span class="ticket-index">GATE 03</span>
@@ -267,7 +274,7 @@
   </a>
 
   <a class="ticket" href="https://t.me/+cH6eGL-Y4_9mMzlh" onclick="return openChannel(event,'https://t.me/+cH6eGL-Y4_9mMzlh')">
-    <div class="ticket-gate blue">⚽️</div>
+    <div class="ticket-gate blue"><img src="gate4.jpg" alt=""></div>
     <div class="perforation"></div>
     <div class="ticket-body">
       <span class="ticket-index">GATE 04</span>
@@ -277,7 +284,7 @@
   </a>
 
   <a class="ticket" href="https://t.me/+QINP4DoQabQ4MTM0" onclick="return openChannel(event,'https://t.me/+QINP4DoQabQ4MTM0')">
-    <div class="ticket-gate">😍</div>
+    <div class="ticket-gate"><img src="gate5.jpg" alt=""></div>
     <div class="perforation"></div>
     <div class="ticket-body">
       <span class="ticket-index">GATE 05</span>
@@ -287,7 +294,7 @@
   </a>
 
   <a class="ticket" href="https://t.me/+dL4CJEcE1gNmYjRi" onclick="return openChannel(event,'https://t.me/+dL4CJEcE1gNmYjRi')">
-    <div class="ticket-gate blue">🖼</div>
+    <div class="ticket-gate blue"><img src="gate6.jpg" alt=""></div>
     <div class="perforation"></div>
     <div class="ticket-body">
       <span class="ticket-index">GATE 06</span>
@@ -297,7 +304,7 @@
   </a>
 
   <a class="ticket" href="https://t.me/+CfUPe5f9qpVhYTFk" onclick="return openChannel(event,'https://t.me/+CfUPe5f9qpVhYTFk')">
-    <div class="ticket-gate">🦁</div>
+    <div class="ticket-gate"><img src="gate7.jpg" alt=""></div>
     <div class="perforation"></div>
     <div class="ticket-body">
       <span class="ticket-index">GATE 07</span>
@@ -305,9 +312,8 @@
     </div>
     <div class="ticket-arrow">‹</div>
   </a>
-
-  <a class="ticket" href="https://t.me/+jrOHJcpB2WExY2Vk" onclick="return openChannel(event,'https://t.me/+jrOHJcpB2WExY2Vk')">
- <div class="ticket-gate blue">⚽</div>
+ <a class="ticket" href="https://t.me/+jrOHJcpB2WExY2Vk" onclick="return openChannel(event,'https://t.me/+jrOHJcpB2WExY2Vk')">
+    <div class="ticket-gate blue"><img src="gate8.jpg" alt=""></div>
     <div class="perforation"></div>
     <div class="ticket-body">
       <span class="ticket-index">GATE 08</span>
@@ -319,7 +325,7 @@
 </div>
 
 <div class="footer">
-  تابع <span class="gold">جميع القنوات</span> ليصلك كل جديد أولاً بأول — أخبار، أهداف، صور، وتحليلات.
+  تابع <span class="gold">جميع البوابات</span> ليصلك كل جديد أولاً بأول — أخبار، أهداف، صور، وتحليلات.
 </div>
 
 <div class="credit">تم تطوير البوت بواسطة سام</div>
