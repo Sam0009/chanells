@@ -14,26 +14,45 @@
     --blue: #0a3a7a;
     --blue-deep: #041d3f;
     --gold: #ffd23f;
-    --bg: #070b16;
-    --card: #0f1730;
-    --card-line: #1f2a4d;
+    --bg: #05070f;
+    --card: rgba(15, 23, 48, 0.82);
+    --card-line: #2a3560;
     --text: #f4f0e6;
-    --muted: #8a93b3;
+    --muted: #9aa3c2;
   }
 
   * { box-sizing: border-box; }
 
-  body {
+  html, body {
     margin: 0;
     min-height: 100vh;
+    background: var(--bg);
+  }
+
+  .bg-layer {
+    position: fixed;
+    inset: 0;
+    background-image: url('logo.png');
+    background-size: cover;
+    background-position: center 20%;
+    filter: blur(14px) brightness(0.35) saturate(1.2);
+    transform: scale(1.15);
+    z-index: -2;
+  }
+
+  .bg-overlay {
+    position: fixed;
+    inset: 0;
     background:
-      radial-gradient(circle at 15% -10%, rgba(166,0,61,0.35), transparent 45%),
-      radial-gradient(circle at 90% 0%, rgba(10,58,122,0.4), transparent 40%),
-      var(--bg);
+      radial-gradient(circle at 50% 0%, rgba(5,7,15,0.2), rgba(5,7,15,0.92) 65%),
+      linear-gradient(180deg, rgba(5,7,15,0.4), var(--bg) 90%);
+    z-index: -1;
+  }
+
+  body {
     color: var(--text);
     font-family: 'Cairo', sans-serif;
-    padding: 28px 16px 70px;
-    overflow-x: hidden;
+    padding: 30px 16px 70px;
   }
 
   .stripe-bar {
@@ -48,10 +67,20 @@
     z-index: 10;
   }
 
-  .header {
+  .hero {
     text-align: center;
-    margin: 20px auto 34px;
+    margin: 18px auto 30px;
     max-width: 460px;
+  }
+
+  .hero-logo {
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--gold);
+    box-shadow: 0 0 0 6px rgba(166,0,61,0.25), 0 12px 34px rgba(0,0,0,0.55);
+    margin-bottom: 18px;
   }
 
   .eyebrow {
@@ -62,16 +91,17 @@
     text-transform: uppercase;
   }
 
-  .header h1 {
+  .hero h1 {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 29px;
     margin: 10px 0 12px;
     letter-spacing: 0.5px;
     line-height: 1.3;
+    text-shadow: 0 3px 18px rgba(0,0,0,0.6);
   }
 
-  .header p {
+  .hero p {
     font-size: 14px;
     color: var(--muted);
     line-height: 1.8;
@@ -83,7 +113,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
   }
 
   .ticket {
@@ -91,6 +121,7 @@
     display: flex;
     align-items: stretch;
     background: var(--card);
+    backdrop-filter: blur(6px);
     border: 1px solid var(--card-line);
     border-radius: 14px;
     overflow: hidden;
@@ -152,8 +183,7 @@
     letter-spacing: 2px;
     color: var(--muted);
   }
-
-  .ticket-name {
+ .ticket-name {
     font-weight: 700;
     font-size: 16.5px;
   }
@@ -186,15 +216,19 @@
     text-align: center;
     margin-top: 14px;
     font-size: 11px;
-    color: var(--card-line);
+    color: #3a4270;
     letter-spacing: 0.5px;
   }
 </style>
 </head>
 <body>
 
+<div class="bg-layer"></div>
+<div class="bg-overlay"></div>
 <div class="stripe-bar"></div>
- <div class="header">
+
+<div class="hero">
+  <img class="hero-logo" src="logo.png" alt="برشا برشا بالعربية">
   <div class="eyebrow">شبكة القنوات الرسمية</div>
   <h1>بوابتك اليومية لعالم البرشا 🎟️</h1>
   <p>اختر تذكرتك وادخل مباشرة إلى القناة — أخبار، أهداف، وتحليلات بلا توقف.</p>
@@ -273,7 +307,7 @@
   </a>
 
   <a class="ticket" href="https://t.me/+jrOHJcpB2WExY2Vk" onclick="return openChannel(event,'https://t.me/+jrOHJcpB2WExY2Vk')">
-    <div class="ticket-gate blue">⚽</div>
+ <div class="ticket-gate blue">⚽</div>
     <div class="perforation"></div>
     <div class="ticket-body">
       <span class="ticket-index">GATE 08</span>
