@@ -181,12 +181,20 @@
     color: var(--gold);
     font-weight: 700;
   }
+
+  .credit {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 11px;
+    color: var(--card-line);
+    letter-spacing: 0.5px;
+  }
 </style>
 </head>
 <body>
 
 <div class="stripe-bar"></div>
-[08/08/2026 04:27 ص] ѕᴀᴍ: <div class="header">
+ <div class="header">
   <div class="eyebrow">شبكة القنوات الرسمية</div>
   <h1>بوابتك اليومية لعالم البرشا 🎟️</h1>
   <p>اختر تذكرتك وادخل مباشرة إلى القناة — أخبار، أهداف، وتحليلات بلا توقف.</p>
@@ -194,4 +202,110 @@
 
 <div class="container">
 
-  <a class="ticket" href="https://t.me/+FovoXWz0fLRhO
+  <a class="ticket" href="https://t.me/+FovoXWz0fLRhOTBk" onclick="return openChannel(event,'https://t.me/+FovoXWz0fLRhOTBk')">
+    <div class="ticket-gate">🇪🇸</div>
+    <div class="perforation"></div>
+    <div class="ticket-body">
+      <span class="ticket-index">GATE 01</span>
+      <span class="ticket-name">برشا برشا بالعربية</span>
+    </div>
+    <div class="ticket-arrow">‹</div>
+  </a>
+
+  <a class="ticket" href="https://t.me/+kSDCZZdUq8JmYmE0" onclick="return openChannel(event,'https://t.me/+kSDCZZdUq8JmYmE0')">
+    <div class="ticket-gate blue">❤️</div>
+    <div class="perforation"></div>
+    <div class="ticket-body">
+      <span class="ticket-index">GATE 02</span>
+      <span class="ticket-name">برشا برشا بالعربية (البديلة)</span>
+    </div>
+    <div class="ticket-arrow">‹</div>
+  </a>
+
+  <a class="ticket" href="https://t.me/+i-dR3foyYqY5ZWEx" onclick="return openChannel(event,'https://t.me/+i-dR3foyYqY5ZWEx')">
+    <div class="ticket-gate">🐐</div>
+    <div class="perforation"></div>
+    <div class="ticket-body">
+      <span class="ticket-index">GATE 03</span>
+      <span class="ticket-name">الأسطورة ميسي</span>
+    </div>
+    <div class="ticket-arrow">‹</div>
+  </a>
+
+  <a class="ticket" href="https://t.me/+cH6eGL-Y4_9mMzlh" onclick="return openChannel(event,'https://t.me/+cH6eGL-Y4_9mMzlh')">
+    <div class="ticket-gate blue">⚽️</div>
+    <div class="perforation"></div>
+    <div class="ticket-body">
+      <span class="ticket-index">GATE 04</span>
+      <span class="ticket-name">نادي برشلونة</span>
+    </div>
+    <div class="ticket-arrow">‹</div>
+  </a>
+
+  <a class="ticket" href="https://t.me/+QINP4DoQabQ4MTM0" onclick="return openChannel(event,'https://t.me/+QINP4DoQabQ4MTM0')">
+    <div class="ticket-gate">😍</div>
+    <div class="perforation"></div>
+    <div class="ticket-body">
+      <span class="ticket-index">GATE 05</span>
+      <span class="ticket-name">برشا ساخر</span>
+    </div>
+    <div class="ticket-arrow">‹</div>
+  </a>
+
+  <a class="ticket" href="https://t.me/+dL4CJEcE1gNmYjRi" onclick="return openChannel(event,'https://t.me/+dL4CJEcE1gNmYjRi')">
+    <div class="ticket-gate blue">🖼</div>
+    <div class="perforation"></div>
+    <div class="ticket-body">
+      <span class="ticket-index">GATE 06</span>
+      <span class="ticket-name">خلفيات | Wallpapers</span>
+    </div>
+    <div class="ticket-arrow">‹</div>
+  </a>
+
+  <a class="ticket" href="https://t.me/+CfUPe5f9qpVhYTFk" onclick="return openChannel(event,'https://t.me/+CfUPe5f9qpVhYTFk')">
+    <div class="ticket-gate">🦁</div>
+    <div class="perforation"></div>
+    <div class="ticket-body">
+      <span class="ticket-index">GATE 07</span>
+      <span class="ticket-name">البريميرليغ بالعربي</span>
+    </div>
+    <div class="ticket-arrow">‹</div>
+  </a>
+
+  <a class="ticket" href="https://t.me/+jrOHJcpB2WExY2Vk" onclick="return openChannel(event,'https://t.me/+jrOHJcpB2WExY2Vk')">
+    <div class="ticket-gate blue">⚽</div>
+    <div class="perforation"></div>
+    <div class="ticket-body">
+      <span class="ticket-index">GATE 08</span>
+      <span class="ticket-name">أهداف المباريات</span>
+    </div>
+    <div class="ticket-arrow">‹</div>
+  </a>
+
+</div>
+
+<div class="footer">
+  تابع <span class="gold">جميع البوابات</span> ليصلك كل جديد أولاً بأول — أخبار، أهداف، صور، وتحليلات.
+</div>
+
+<div class="credit">تم تطوير البوت بواسطة سام</div>
+
+<script>
+  const tg = window.Telegram ? window.Telegram.WebApp : null;
+  if (tg) {
+    tg.ready();
+    tg.expand();
+  }
+
+  function openChannel(e, url) {
+    e.preventDefault();
+    if (tg && tg.openTelegramLink) {
+      tg.openTelegramLink(url);
+    } else {
+      window.location.href = url;
+    }
+    return false;
+  }
+</script>
+</body>
+</html>
